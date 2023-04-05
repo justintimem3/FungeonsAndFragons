@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html>
+  <style>
+    .text{color: white}
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <body style="background-color: black">
+    <h1 class="text">Welcome Traveler: insert your new discovery here</h1>
+    <h2 class="text">This page is for the discovery of races</h2>
+    <form id="myForm" style="color: white">
+      Choose Book Race is in
+      <select name="book" id="book">
+        <option value="PHB">Players Handbook</option>
+        <option value="Volos">Volos</option>
+      </select><br>
+      Enter name of race(no spaces and capitalize the first letter): <input type="text" name="race_name"><br>
+      Enter age range from mature to max life(ex: 50 - 350): <input type="text" name="race_age"><br>
+
+      Select the races first ability score improvement
+      <select name="race_asi1" id="race_asi1">
+        <option value="1 Str">1 Strength</option>
+        <option value="2 Str">2 Strength</option>
+        <option value="1 Dex">1 Dexterity</option>
+        <option value="2 Dex">2 Dexterity</option>
+        <option value="1 Con">1 Constitution</option>
+        <option value="2 Con">2 Constitution</option>
+        <option value="1 Int">1 Intelligence</option>
+        <option value="2 Int">2 Intelligence</option>
+        <option value="1 Wis">1 Wisdom</option>
+        <option value="2 Wis">2 Wisdom</option>
+        <option value="1 Cha">1 Charisma</option>
+        <option value="2 Cha">2 Charisma</option>
+      </select><br>
+      Select the races second ability score improvement
+      <select name="race_asi2" id="race_asi2">
+        <option value="1 Str">1 Strength</option>
+        <option value="2 Str">2 Strength</option>
+        <option value="1 Dex">1 Dexterity</option>
+        <option value="2 Dex">2 Dexterity</option>
+        <option value="1 Con">1 Constitution</option>
+        <option value="2 Con">2 Constitution</option>
+        <option value="1 Int">1 Intelligence</option>
+        <option value="2 Int">2 Intelligence</option>
+        <option value="1 Wis">1 Wisdom</option>
+        <option value="2 Wis">2 Wisdom</option>
+        <option value="1 Cha">1 Charisma</option>
+        <option value="2 Cha">2 Charisma</option>
+      </select><br>
+      Enter race speed
+      <select name="race_speed1" id="race_speed1">
+        <option value="25">25 ft</option>
+        <option value="30">30 ft</option>
+      </select><br>
+      Enter races special speed if they have none
+      <select name="race_speed2" id="race_speed2">
+        <option value="30 swim">30 ft swim</option>
+        <option value="60 swim">60 ft swim</option>
+        <option value="30 fly">30 ft fly</option>
+        <option value="50 fly">50 ft fly</option>
+        <option value="60 fly">60 ft fly</option>
+        <option value="30 Burrow">30 ft Burrow</option>
+        <option value="60 Burrow">60 ft Burrow</option>
+      </select><br>
+
+      Enter races alignment <input type="text" name="race_alignment"><br>
+      Enter races size(ex. 4 - 5 ft tall and 150 pounds) <input type="text" name="race_size"><br>
+      Does this race have darkvision?
+      <select name="race_vision" id="race_vision">
+        <option value="Normal vision">no darkvision</option>
+        <option value="darkvision">60 ft darkvision</option>
+        <option value="extended darkvision">120 ft darkvision</option>
+      </select><br>
+      Enter weapon proficiencies: <input type="text" name="race_weapon_prof"><br>
+      Enter tool proficiencies <input type="text" name="race_tool_prof"><br>
+      Enter race languages <input type="text" name="race_languages"><br>
+      Enter subraces names (ex. Hill Dwarf, Mountain Dwarf) <input type="text" name="race_subraces"><br>
+      Enter the name of the first racial ability <input type="text" name="race_ability1"><br>
+      Enter the name of the second racial ability(may not have one type N/A if not) <input type="text" name="race_ability2"><br>
+      Enter the name of the third racial ability(may not have one type N/A if not) <input type="text" name="race_ability3"><br>
+
+
+    </form>
+    <button onclick="insert_races()">Submit!</button>
+
+</body>
+<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
+<script src="./insert_races.js"></script>
+</html>
